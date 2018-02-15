@@ -1,0 +1,13 @@
+.login-container {
+  background-color: #FCFCFD;
+  padding: 0px 70px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.35);
+  min-height: 50vh;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  border-radius: 10px;
+}
+
+.help-block {
+	color: red;
+}

@@ -1,1 +1,93 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Styles for input */
+
+.gral-input {
+  width: 100%;
+  padding-left: 15px;
+  border-style: solid;
+  border: 1px solid #CACED5;
+  border-radius: 5px;
+  height: 35px;
+}
+
+input.gral-input.ng-invalid.ng-touched {
+	border: 1px solid red;
+}
+
+input.gral-input:focus, input.gral-input.ng-invalid.ng-touched:focus {
+  outline: none;
+	border: 1px solid green;
+}
+/* Styles for input */
+
+/* Styles for buttons */
+
+/* Styles for buttons */
+
+/* Style for loader */
+app-loader {
+  width: calc(100% - 2rem);
+  height: 100%;
+  position: absolute;
+  background-color: transparent;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  border: 1.1428rem solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 1.1428rem solid #3498db;
+  width: 8.5714rem;
+  height: 8.5714rem;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Style for loader */
+
+/* Style for graphs */
+.graph-container {
+  background-color: #fff;
+  border-radius: 0.7142rem !important;
+  box-shadow: 0px 0.2142rem 0.7142rem rgba(0,0,0,0.16);
+  position: relative;
+  padding: 2.1428rem;
+  height: 100%;
+}
+
+.graph-container div.chart {
+  height: 24.2857rem;
+}
+
+.graphs-container {
+  margin: 1.0714rem;
+}
+/* Style for graphs */
+
+/* Style for sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  padding-top: 4rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* Style for sidebar */

@@ -1,0 +1,85 @@
+
+<div class="container ">
+    <div class="row d-flex justify-content-center">
+        <div class="col-10 col-md-6 login-container d-flex flex-column justify-content-around">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center">
+                        <img class="img-fluid" src="assets/img/logo.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                  <div class="alert alert-danger" role="alert" *ngIf="loginError">
+                    Email o password incorrectos
+                  </div>
+                    <form (ngSubmit) = "onLogin(loginForm)" #loginForm="ngForm">
+
+                      <div class="row">
+                        <div class="user form-group col-12 ">
+                          <input
+                            class="gral-input"
+                            placeholder="Usuario"
+                            name="username"
+                            id="username"
+                            email
+                            ngModel
+                            required
+                            (focus)="loginError=false"
+                            #username="ngModel">
+
+                          <div class="row">
+                            <div class="col-12">
+                              <span
+                                class="help-block"
+                                *ngIf="!username.valid && username.touched">
+                                Please enter a valid email
+                              </span>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="password form-group col-12 ">
+                          <input
+                            class="gral-input"
+                            placeholder="Contraseña"
+                            type="password"
+                            name="password"
+                            id="password"
+                            ngModel
+                            required
+                            (focus)="loginError=false"
+                            #password="ngModel">
+                          <div class="row">
+                            <div class="col-12">
+                              <span
+                                class="help-block"
+                                *ngIf="!password.valid && password.touched">
+                                Please enter a valid password
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="row">
+                        <div class="col-12 ">
+                          <button
+                            type="submit"
+                            class="btn  btn-primary float-right"
+                            [disabled]="!loginForm.valid">Iniciar sesión</button>
+                        </div>
+                      </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
